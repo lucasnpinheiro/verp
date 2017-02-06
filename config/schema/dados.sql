@@ -17,6 +17,7 @@
 
  LOCK TABLES `administradores` WRITE;
  /*!40000 ALTER TABLE `administradores` DISABLE KEYS */;
+ INSERT IGNORE INTO `administradores` (`id`, `foto`, `nome`, `email`, `senha`, `status`, `created`, `modified`) VALUES  (1, 'cef827684ac16280f76a5abd91be36f6.png', 'Administrador', 'admin@verp.com.br', '$2y$10$JvRp7oo8RdKqj0w9d0loqeXl8V6w3JnYnvtajgYN0XKACAHY5a85i', 1, '2017-02-06 01:53:53', NULL);
  /*!40000 ALTER TABLE `administradores` ENABLE KEYS */;
  UNLOCK TABLES;
  
@@ -30,6 +31,7 @@
 
  LOCK TABLES `clientes` WRITE;
  /*!40000 ALTER TABLE `clientes` DISABLE KEYS */;
+ INSERT IGNORE INTO `clientes` (`id`, `nome`, `documento`, `documento_estadual`, `cep`, `logradouro`, `numero`, `complemento`, `bairro`, `cidade`, `estado`, `telefone1`, `telefone2`, `telefone3`, `telefone4`, `ponto_referencia`, `foto`, `email1`, `email2`, `email3`, `site`, `created`, `modified`) VALUES  (1, 'teste aaa', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'c3951fe456e183d20329cfe756631cec.jpg', NULL, NULL, NULL, NULL, '2017-02-06 01:53:53', NULL);
  /*!40000 ALTER TABLE `clientes` ENABLE KEYS */;
  UNLOCK TABLES;
  
@@ -56,6 +58,7 @@
 
  LOCK TABLES `empresas` WRITE;
  /*!40000 ALTER TABLE `empresas` DISABLE KEYS */;
+ INSERT IGNORE INTO `empresas` (`id`, `nome`, `documento`, `documento_estadual`, `cep`, `logradouro`, `numero`, `complemento`, `bairro`, `cidade`, `estado`, `telefone1`, `telefone2`, `telefone3`, `telefone4`, `ponto_referencia`, `foto`, `email1`, `email2`, `email3`, `site`, `created`, `modified`) VALUES  (1, 'teste 22', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ca4e93a7135c72afb3baab1ac22c07f4.png', NULL, NULL, NULL, NULL, '2017-02-06 01:53:53', NULL);
  /*!40000 ALTER TABLE `empresas` ENABLE KEYS */;
  UNLOCK TABLES;
  
@@ -69,6 +72,7 @@
 
  LOCK TABLES `fornecedores` WRITE;
  /*!40000 ALTER TABLE `fornecedores` DISABLE KEYS */;
+ INSERT IGNORE INTO `fornecedores` (`id`, `nome`, `documento`, `documento_estadual`, `cep`, `logradouro`, `numero`, `complemento`, `bairro`, `cidade`, `estado`, `telefone1`, `telefone2`, `telefone3`, `telefone4`, `ponto_referencia`, `foto`, `email1`, `email2`, `email3`, `site`, `created`, `modified`) VALUES  (1, 'teste aaa', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2017-02-06 01:53:53', NULL);
  /*!40000 ALTER TABLE `fornecedores` ENABLE KEYS */;
  UNLOCK TABLES;
  
@@ -121,6 +125,7 @@
 
  LOCK TABLES `produtos` WRITE;
  /*!40000 ALTER TABLE `produtos` DISABLE KEYS */;
+ INSERT IGNORE INTO `produtos` (`id`, `codigo`, `nome`, `grupo_id`, `unidades_carga_id`, `peso`, `icms_id`, `impostos_origem_id`, `varejo_valor_compra`, `varejo_valor_lucro`, `varejo_valor_venda`, `atacado_quantidade_minima`, `atacado_valor_lucro`, `atacado_valor_venda`, `pratica_desconto`, `valor_desconto`, `media_venda_30_dias`, `estoque_atual`, `descricao`, `status`, `foto`, `created`, `modified`) VALUES  (1, '1', 'ssss', NULL, NULL, 0.5, NULL, NULL, 1.45, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '66cdaf7fe94342e5febe1e903bc951b8.png', '2017-02-06 01:53:53', NULL);
  /*!40000 ALTER TABLE `produtos` ENABLE KEYS */;
  UNLOCK TABLES;
  
@@ -160,6 +165,7 @@
 
  LOCK TABLES `vendedores` WRITE;
  /*!40000 ALTER TABLE `vendedores` DISABLE KEYS */;
+ INSERT IGNORE INTO `vendedores` (`id`, `nome`, `documento`, `documento_estadual`, `cep`, `logradouro`, `numero`, `complemento`, `bairro`, `cidade`, `estado`, `telefone1`, `telefone2`, `telefone3`, `telefone4`, `ponto_referencia`, `foto`, `email1`, `email2`, `email3`, `site`, `estado_civil`, `casa_propria`, `veiculo`, `created`, `modified`) VALUES  (1, 'dasdfasd', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'c97c4bdde612310d89059a1860c9af47.png', NULL, NULL, NULL, NULL, NULL, 0, 0, '2017-02-06 01:53:53', NULL);
  /*!40000 ALTER TABLE `vendedores` ENABLE KEYS */;
  UNLOCK TABLES;
  
@@ -176,4 +182,4 @@
 /* !40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 
--- Dump completed on 2017-01-11 11:18:40
+-- Dump completed on 2017-02-06 01:53:53

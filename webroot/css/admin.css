@@ -1,0 +1,17 @@
+body {
+    background: #cccccc;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    color: #4c5667;
+    padding-bottom: 61px;
+    overflow-x: hidden !important;
+}
+:required,
+:required:focus{
+    border-left: 1px solid red;
+}
+.image-foto{
+    max-height: 100px;
+    max-width: 100%;
+    text-align: center;
+}

@@ -160,4 +160,11 @@ trait FuncoesTraits {
         return $file;
     }
 
+    public function calculaLucro($valorVenda, $valorCusto) {
+        if ($valorCusto > 0 AND $valorVenda > 0) {
+            return (float) round(((($valorVenda - $valorCusto) / $valorVenda) * 100), 2);
+        }
+        return 0;
+    }
+
 }

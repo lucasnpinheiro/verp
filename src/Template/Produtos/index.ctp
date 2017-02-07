@@ -21,11 +21,11 @@
                     <td><?= $this->Html->image($produto->url, ['class' => 'img-responsive', 'style' => 'max-height: 50px;']) ?></td>
                     <td><?= h($produto->codigo) ?></td>
                     <td><?= h($produto->nome) ?></td>
-                    <td><?= $produto->has('grupo') ? $this->Html->link($produto->grupo->id, ['controller' => 'Grupos', 'action' => 'edit', $produto->grupo->id]) : '' ?></td>
-                    <td><?= $produto->has('unidades_carga') ? $this->Html->link($produto->unidades_carga->id, ['controller' => 'UnidadesCargas', 'action' => 'edit', $produto->unidades_carga->id]) : '' ?></td>
+                    <td><?= $produto->has('grupo') ? $this->Html->link($produto->grupo->grupo, ['controller' => 'Grupos', 'action' => 'edit', $produto->grupo->id]) : '' ?></td>
+                    <td><?= $produto->has('unidades_carga') ? $this->Html->link($produto->unidades_carga->unidade_carga, ['controller' => 'UnidadesCargas', 'action' => 'edit', $produto->unidades_carga->id]) : '' ?></td>
                     <td><?= $this->Number->format($produto->peso) ?></td>
-                    <td><?= $this->Number->format($produto->varejo_valor_venda) ?></td>
-                    <td><?= $this->Number->format($produto->atacado_valor_venda) ?></td>
+                    <td><?= $this->Number->currency($produto->varejo_valor_venda) ?></td>
+                    <td><?= $this->Number->currency($produto->atacado_valor_venda) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $produto->id]) ?>
                         <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $produto->id], ['confirm' => __('Are you sure you want to delete # {0}?', $produto->id)]) ?>

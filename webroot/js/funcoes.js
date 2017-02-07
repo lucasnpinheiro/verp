@@ -251,8 +251,11 @@ cake.html.myAlert = function (str, css) {
     $('div.my-alert').show();
 };
 cake.util.calculaLucro = function (valorVenda, valorCusto) {
-    if (valorCusto > 0 && valorVenda > 0) {
-        var resultado = cake.util.number_format(parseFloat((parseFloat(valorVenda) - parseFloat(valorCusto)) / parseFloat(valorVenda)), 2, '.', ',');
+    if (!!valorCusto && !!valorVenda) {
+        var venda = cake.util.convertFloat(valorVenda);
+        var compra = cake.util.convertFloat(valorCusto);
+        var calculo = (((venda - compra) / venda) * 100);
+        var resultado = cake.util.number_format(calculo, 2, '.', ',');
         return resultado;
     }
     return 0;

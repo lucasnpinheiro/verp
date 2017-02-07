@@ -233,6 +233,12 @@ class ProdutosTable extends Table {
         return $retorno;
     }
 
+    public function beforeSave(\Cake\Event\Event $event, \Cake\ORM\Entity $entity) {
+        $entity->varejo_valor_lucro = $this->calculaLucro($entity->varejo_valor_venda, $entity->varejo_valor_compra);
+        $entity->atacado_valor_lucro = $this->calculaLucro($entity->atacado_valor_venda, $entity->varejo_valor_compra);
+        return true;
+    }
+
     public function afterSave(\Cake\Event\Event $event, \Cake\Datasource\EntityInterface $entity, \ArrayObject $options) {
         if (empty($entity->codigo)) {
             $entity->codigo = $entity->id;
